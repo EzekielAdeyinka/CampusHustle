@@ -49,6 +49,16 @@ button.inverse {
 	display: inline-block;
 }
 
+button:active,
+button:hover,
+button:focus,
+.btn:active,
+.btn:hover,
+.btn:focus{
+	color: var(--green);
+	background-color: #fff
+}
+
 header {
 	display: flex;
 	flex-wrap: wrap;
@@ -82,7 +92,7 @@ header {
 
 .main-nav__list-item {
 	margin: 0 40px;
-	font-size: 1.1rem;
+	font-size: 0.9rem;
 }
 
 .main-nav__list-item a::after,
