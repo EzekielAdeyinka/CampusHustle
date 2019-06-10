@@ -1,8 +1,7 @@
 /* Root Variables*/
-/*#06D61E*/
 :root {
-	--green: #08c31e;
-	--google: "Google Sans Regular", serif;
+	--green: #3fca89;
+	--font: 'Noto Sans HK', sans-serif;
 }
 
 /* General Styles  */
@@ -13,7 +12,7 @@ body {
 }
 
 body {
-	font-family: var(--google);
+	font-family: var(--font);
 	margin: 0;
 	padding: 0;
 }
@@ -230,14 +229,19 @@ header {
 	min-width: 170px;
 }
 
+.card-img {
+    height: 120px;
+}
+
 .card-img img {
-	width: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .card-details {
 	text-align: center;
 	width: 100%;
-	margin: 10px 0;
+    margin: 10px 0;
 }
 
 .join-banner {
