@@ -24,6 +24,33 @@ const makeRequest = (url, method, data = null) => {
 	return req.then(response => response.json());
 };
 
+const overlay = document.querySelector(".overlay");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+const toggleMobileNav = () => {
+	const mobileNav = document.querySelector(".mobile-nav");
+	if (mobileNav.classList.contains("hide")) {
+		overlay.classList.remove("hide");
+		mobileMenu.classList.add("open");
+	} else {
+		overlay.classList.add("hide");
+		mobileMenu.classList.remove("open");
+	}
+	mobileNav.classList.toggle("hide");
+};
+
+if (overlay !== null) {
+	overlay.addEventListener("click", () => {
+		const mobileNav = document.querySelector(".mobile-nav");
+		if (!mobileNav.classList.contains("hide")) {
+			toggleMobileNav();
+		}
+	});
+}
+if (mobileMenu !== null) {
+	mobileMenu.addEventListener("click", toggleMobileNav);
+}
+
 const searchList = document.querySelector(".search-list");
 
 const handleSearch = search => {
@@ -77,11 +104,11 @@ if (window.location.pathname.includes("vendor-profile.html")) {
 	fetchVendor(id)
 		.then(data => {
 			if (data.length > 0) {
-                const vendor = data[0];
-                let img = null;
-					vendor.vendorID > 4
-						? (img = imgUrls[vendor.vendorID - 5])
-						: (img = imgUrls[vendor.vendorID - 1]);
+				const vendor = data[0];
+				let img = null;
+				vendor.vendorID > 4
+					? (img = imgUrls[vendor.vendorID - 5])
+					: (img = imgUrls[vendor.vendorID - 1]);
 				profile.innerHTML += `<div class="profile-img">
             <img src=${img} alt="Vendor Profile Pic" />
         </div>
@@ -110,7 +137,7 @@ if (window.location.pathname.includes("all-vendors.html")) {
 		.then(data => {
 			if (data.length > 0) {
 				data.forEach(vendor => {
-                    let img = null;
+					let img = null;
 					vendor.vendorID > 4
 						? (img = imgUrls[vendor.vendorID - 5])
 						: (img = imgUrls[vendor.vendorID - 1]);
