@@ -1,0 +1,24 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/CampusHustle/config
+/.vs/CampusHustle/DesignTimeBuild
+/.vs
+/CampusHustle/bin
+/CampusHustle/Content
+/CampusHustle/fonts
+/CampusHustle/obj/Debug
+/CampusHustle/Properties
+/CampusHustle/Scripts
+/CampusHustle/Areas/HelpPage
+/CampusHustle/App_Start
+/packages
+/VendorService
+/CampusHustle/Web.Release.config
+/CampusHustle/Web.Debug.config
+/CampusHustle/Web.config
+/CampusHustle/packages.config
+/CampusHustle/Global.asax.cs
+/CampusHustle/Global.asax
+/CampusHustle/CampusHustle.csproj.user
