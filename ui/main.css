@@ -91,9 +91,14 @@ header {
 }
 
 .main-nav__list-item {
-	margin: 0 40px;
+	margin: 10px 40px 0 40px;
 	font-size: 0.9rem;
 }
+
+.main-nav__list-item:nth-child(3) {
+	margin-top: 0;
+}
+
 
 .main-nav__list-item a::after,
 .mobile-nav__list-item a::after {
@@ -276,6 +281,15 @@ header {
 	margin: 10px 0;
 }
 
+.clickable-card {
+	cursor: pointer;
+}
+
+.show-more-btn {
+	width: 85%;
+	margin-top: 10px;
+}
+
 .join-banner {
 	background-image: linear-gradient(
 		to right,
@@ -292,7 +306,7 @@ header {
 	align-items: center;
 }
 
-.join-banner h3 {
+.join-banner h1 {
 	color: #fff;
 	font-size: 2rem;
 }
@@ -301,7 +315,7 @@ header {
 	color: var(--green);
 	background-color: #fff;
 	margin-left: auto;
-	font-size: 1.2rem;
+	font-size: 0.8rem;
 }
 
 .search-banner {
