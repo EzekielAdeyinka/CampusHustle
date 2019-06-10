@@ -28,6 +28,15 @@ namespace CampusHustle.Controllers
                 yield return vendor;
             }
         }
+
+        public IEnumerable<Vendor> Get(string category, string keyWord, string campus)
+        {
+            using (CampusHustleEntities context = new CampusHustleEntities())
+            {
+                return context.Vendors.Where(vd => vd.Category == category || vd.Campus == campus || vd.Service.Contains(keyWord)).ToList();
+            }
+        }
+
         public HttpResponseMessage Post(Vendor vendor)
         {
             using (CampusHustleEntities context = new CampusHustleEntities())
@@ -53,6 +62,7 @@ namespace CampusHustle.Controllers
                     existingVendor.Campus = vendor.Campus;
                     existingVendor.Service = vendor.Service;
                     existingVendor.Address = vendor.Address;
+                    existingVendor.Category = vendor.Category;
 
                     context.SaveChanges();
                     return Request.CreateResponse(HttpStatusCode.OK, vendor);
@@ -61,9 +71,6 @@ namespace CampusHustle.Controllers
                 {
                     return Request.CreateResponse(HttpStatusCode.NotFound, vendor);
                 }
-                
-
-                
             }
         }
 
