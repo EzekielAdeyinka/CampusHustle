@@ -230,9 +230,14 @@ header {
 	width: 65%;
 }
 
+.lg-text {
+	display: inline-block;
+    margin: 0 200px;
+}
+
 .card {
 	width: 25%;
-	margin-right: 50px;
+	margin-right: 30px;
 	margin-bottom: 20px;
 	display: flex;
 	flex-wrap: wrap;
@@ -279,7 +284,7 @@ header {
 
 .join-banner h3 {
 	color: #fff;
-	font-size: 3rem;
+	font-size: 2rem;
 }
 
 .join-banner button {
