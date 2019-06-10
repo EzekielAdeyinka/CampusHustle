@@ -250,6 +250,10 @@ header {
 	width: 65%;
 }
 
+.vendors-list {
+	width: 100%;
+}
+
 .lg-text {
 	display: inline-block;
     margin: 0 200px;

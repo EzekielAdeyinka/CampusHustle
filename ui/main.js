@@ -1,5 +1,12 @@
 const API_URL = "https://campushustle50.azurewebsites.net";
 
+const imgUrls = [
+	"https://res.cloudinary.com/alphex-code-ltd/image/upload/v1560172014/Cape%20Town/sunday.jpg",
+	"https://res.cloudinary.com/alphex-code-ltd/image/upload/v1560172002/Cape%20Town/tinu.jpg",
+	"https://res.cloudinary.com/alphex-code-ltd/image/upload/v1560171999/Cape%20Town/solomon.jpg",
+	"https://res.cloudinary.com/alphex-code-ltd/image/upload/v1560171993/Cape%20Town/timi.jpg"
+];
+
 const makeRequest = (url, method, data = null) => {
 	let req = null;
 	if (method === "get" || method === "delete") {
@@ -38,9 +45,13 @@ if (window.location.pathname.includes("search.html")) {
 		.then(data => {
 			if (data.length > 0) {
 				data.forEach(vendor => {
+					let img = null;
+					vendor.vendorID > 4
+						? (img = imgUrls[vendor.vendorID - 5])
+						: (img = imgUrls[vendor.vendorID - 1]);
 					searchList.innerHTML += `<article class="card search-card">
                 <div class="card-img">
-                    <img src="img/ezekiel.jpg" alt="Vendor Image" />
+                    <img src=${img} alt="Vendor Image" />
                 </div>
                 <div class="card-details">
                     <p>${vendor.firstName} ${vendor.lastName}</p>
@@ -66,9 +77,13 @@ if (window.location.pathname.includes("vendor-profile.html")) {
 	fetchVendor(id)
 		.then(data => {
 			if (data.length > 0) {
-				const vendor = data[0];
+                const vendor = data[0];
+                let img = null;
+					vendor.vendorID > 4
+						? (img = imgUrls[vendor.vendorID - 5])
+						: (img = imgUrls[vendor.vendorID - 1]);
 				profile.innerHTML += `<div class="profile-img">
-            <img src="img/ezekiel.jpg" alt="Vendor Profile Pic" />
+            <img src=${img} alt="Vendor Profile Pic" />
         </div>
         <div class="profile-details">
                 <p>Name: ${vendor.firstName} ${vendor.lastName}</p>
@@ -95,20 +110,26 @@ if (window.location.pathname.includes("all-vendors.html")) {
 		.then(data => {
 			if (data.length > 0) {
 				data.forEach(vendor => {
+                    let img = null;
+					vendor.vendorID > 4
+						? (img = imgUrls[vendor.vendorID - 5])
+						: (img = imgUrls[vendor.vendorID - 1]);
 					vendorsList.innerHTML += `<article class="card search-card">
                 <div class="card-img">
-                    <img src="img/ezekiel.jpg" alt="Vendor Image" />
+                    <img src=${img} alt="Vendor Image" />
                 </div>
                 <div class="card-details">
                     <p>${vendor.firstName} ${vendor.lastName}</p>
                     <p>${vendor.campus}</p>
-                    <a href="vendor-profile.html?id=${vendor.vendorID}" class="btn">View Profile</a>
+                    <a href="vendor-profile.html?id=${
+											vendor.vendorID
+										}" class="btn">View Profile</a>
                 </div>
             </article>`;
 				});
 			} else {
-                vendorsList.innerHTML += `<p>No Vendors found.</p>`
-            }
+				vendorsList.innerHTML += `<p>No Vendors found.</p>`;
+			}
 		})
 		.catch(err => console.log(err.message));
 }
