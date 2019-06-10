@@ -160,6 +160,11 @@ header {
 	height: 100%;
 }
 
+.center-btn {
+	text-align: center;
+	width: 100%;
+}
+
 .seperate {
 	display: flex;
 	flex-wrap: wrap;
