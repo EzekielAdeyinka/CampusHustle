@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Dashboard - Campus Hustle</title>
+		<link
+			href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<a href="index.html"> <span class="green">Campus</span> Hustle </a>
+			</div>
+			<nav class="main-nav">
+				<ul class="main-nav__list">
+					<li class="main-nav__list-item">
+						<a href="#">Home</a>
+					</li>
+					<li class="main-nav__list-item">
+						<a href="#">Chats</a>
+					</li>
+					<li class="main-nav__list-item">
+						<a href="#">Transactions</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="page-section profile">
+				<div class="profile-img">
+					<img src="img/vendor.jpg" alt="Vendor Profile Pic" />
+				</div>
+				<div class="profile-details">
+					<p>Name: Vendor 1</p>
+					<p>Service: Photography</p>
+					<p>Campus: Unilag</p>
+					<p>Years of Experience: 1</p>
+					<p>Phone: 09037283111</p>
+					<p>
+						Bio: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Deleniti, quo minima reiciendis voluptas magnam assumenda corrupti
+						nostrum! Deleniti placeat voluptatem unde aperiam ducimus nemo
+						obcaecati minima rerum id, et dolorum.
+					</p>
+				</div>
+			</section>
+			<div class="seperate">
+				<hr class="line" />
+				<span>&</span>
+				<hr class="line" />
+			</div>
+			<section class="page-section update-profile">
+				<h3>Edit Profile</h3>
+				<div class="container">
+					<form action="#" method="post">
+						<div class="form-group">
+							<input
+								type="text"
+								name="name"
+								class="form-field"
+								placeholder="Your Name"
+								value="Vendor 1"
+								required
+							/>
+						</div>
+						<div class="form-group">
+							<input
+								type="text"
+								name="service"
+								class="form-field"
+								placeholder="Service you render"
+								value="Photography"
+								required
+							/>
+						</div>
+						<div class="form-group">
+							<input
+								type="text"
+								name="campus"
+								class="form-field"
+								placeholder="Your Campus"
+								value="Unilag"
+								required
+							/>
+						</div>
+						<div class="form-group">
+							<input
+								type="number"
+								name="experience"
+								class="form-field"
+								placeholder="Years of Experience"
+								value="1"
+								required
+							/>
+						</div>
+						<div class="form-group">
+							<input
+								type="text"
+								name="phone"
+								class="form-field"
+								placeholder="Your phone number"
+								value="09037283111"
+								required
+							/>
+						</div>
+						<div class="form-group">
+							<textarea
+								name="bio"
+								id="bio"
+								cols="30"
+								rows="10"
+								class="form-field"
+								required
+							>Bio</textarea>
+							<button type="submit">Update</button>
+						</div>
+                    </form>
+                    <div class="aside-svg">
+                            <img src="img/edit.svg" alt="Editable Svg Image" />
+                        </div>
+				</div>
+			</section>
+		</main>
+		<footer class="inverse">
+			<p>&copy; 2019 Copyright. <span class="green">Campus</span>Hustle.inc</p>
+		</footer>
+	</body>
+</html>
