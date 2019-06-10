@@ -132,7 +132,8 @@ header {
 .seperate {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 .seperate span {
@@ -145,7 +146,7 @@ header {
 	margin: 9px 0;
 	height: 1.5px;
 	width: 10%;
-	background-color: var(--green);
+    background-color: var(--green);
 }
 
 .page-section {
@@ -155,6 +156,40 @@ header {
 
 .page-section h3 {
 	font-size: 1.6rem;
+}
+
+.how-to-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.how-to-card {
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    justify-content: center;
+
+}
+
+.how-to-card__img {
+    width:40%;
+}
+
+.how-to-card__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.how-to-card__no {
+    font-size: 5rem;
+}
+
+.how-to-card__text {
+    width: 100%;
+    margin-top: 20px;
 }
 
 .container {
@@ -222,7 +257,7 @@ header {
 
 .join-banner h3 {
 	color: #fff;
-	font-size: 4rem;
+	font-size: 3rem;
 }
 
 .join-banner button {
