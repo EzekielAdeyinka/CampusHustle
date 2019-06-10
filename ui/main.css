@@ -169,13 +169,12 @@ header {
     width: 25%;
     display: flex;
     flex-wrap: wrap;
-    padding: 30px;
+    padding: 40px;
     justify-content: center;
-
 }
 
 .how-to-card__img {
-    width:40%;
+    width:35%;
 }
 
 .how-to-card__img img {
@@ -190,6 +189,7 @@ header {
 .how-to-card__text {
     width: 100%;
     margin-top: 20px;
+    text-justify: justify;
 }
 
 .container {
