@@ -1,0 +1,21 @@
+footer {
+	padding: 10px;
+	font-size: 1.1rem;
+	text-align: center;
+}
+
+footer.Inverse {
+	background-image: linear-gradient(
+		to right,
+		var(--green),
+		var(--green),
+		var(--green),
+		var(--green),
+		var(--green)
+	);
+	color: #fff;
+}
+
+footer.Inverse .green {
+	color: #000;
+}

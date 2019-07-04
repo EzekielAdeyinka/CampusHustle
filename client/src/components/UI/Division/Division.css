@@ -1,0 +1,19 @@
+.Seperate {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.Seperate span {
+	color: var(--green);
+	margin: 0 10px;
+}
+
+.Line {
+	border: none;
+	margin: 9px 0;
+	height: 1.5px;
+	width: 10%;
+	background-color: var(--green);
+}

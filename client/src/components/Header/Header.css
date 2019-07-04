@@ -1,0 +1,188 @@
+.Main_nav {
+	margin-left: auto;
+}
+
+.Mobile_menu {
+	display: none;
+}
+
+.Main_nav__list {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+}
+
+.Mobile_nav__list {
+	list-style: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+.Main_nav__list_item,
+.Mobile_nav__list_item {
+	margin: 10px 40px 0 40px;
+	font-size: 0.9rem;
+}
+
+.Main_nav__list_item:nth-child(3) {
+	margin-top: 0;
+}
+
+.Mobile_nav__list_item:nth-child(3) {
+	font-size: 0.8rem;
+	width: 100%;
+}
+
+.Main_nav__list_item a::after,
+.Mobile_nav__list_item a::after {
+	content: "";
+	display: block;
+	margin-top: 3px;
+	width: 0%;
+	border-bottom: 2px solid var(--green);
+	transition: all 0.5s;
+}
+
+.Main_nav__list_item a:hover,
+.Main_nav__list_item a:focus,
+.Main_nav__list_item a:active,
+.Mobile_nav__list_item a:hover,
+.Mobile_nav__list_item a:focus,
+.Mobile_nav__list_item a:active {
+	color: var(--green);
+}
+
+.Main_nav__list_item a:hover::after,
+.Main_nav__list_item a:focus::after,
+.Main_nav__list_item a:active::after,
+.Mobile_nav__list_item a:hover::after,
+.Mobile_nav__list_item a:focus::after,
+.Mobile_nav__list_item a:active::after {
+	width: 100%;
+}
+
+.Mobile_nav {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 45vw;
+	height: 100vh;
+	background-color: #fff;
+	padding-top: 30px;
+	padding-right: 40px;
+	z-index: 10;
+	transition: all 0.5s;
+}
+
+.Mobile_nav .Logo {
+	margin: 15px;
+}
+
+/* Burger Styles */
+.Burger {
+	height: 3em;
+	width: 3em;
+	position: relative;
+	font-size: 0.8rem;
+	cursor: pointer;
+	-webkit-transition: 0.2s all;
+	-o-transition: 0.2s all;
+	transition: 0.2s all;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.Burger .Burger_lines:after {
+	left: 0;
+	top: -1em;
+}
+.Burger .Burger_lines:before {
+	left: 1em;
+	top: 1em;
+}
+.Burger:after {
+	content: "";
+	display: block;
+	position: absolute;
+	height: 150%;
+	width: 150%;
+	top: -25%;
+	left: -25%;
+}
+.Burger .Burger_lines {
+	top: 50%;
+	margin-top: -0.125em;
+}
+.Burger .Burger_lines,
+.Burger .Burger_lines:after,
+.Burger .Burger_lines:before {
+	pointer-events: none;
+	display: block;
+	content: "";
+	width: 100%;
+	border-radius: 0.25em;
+	background-color: black;
+	height: 0.25em;
+	position: absolute;
+	-webkit-transform: rotate(0);
+	-ms-transform: rotate(0);
+	transform: rotate(0);
+}
+.Burger .Burger_lines:after {
+	left: 0;
+	top: -1em;
+}
+
+.Burger .Burger_lines:before {
+	left: 1em;
+	top: 1em;
+}
+
+.Burger.Burger_slip .Burger_lines:after,
+.Burger.Burger_slip .Burger_lines:before {
+	width: 2em;
+}
+
+.Burger.Burger_slip .Burger_lines,
+.Burger.Burger_slip .Burger_lines:after,
+.Burger.Burger_slip .Burger_lines:before {
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+.Burger.Burger_slip.open .Burger_lines {
+	-webkit-transform: translateX(-2em);
+	-ms-transform: translateX(-2em);
+	transform: translateX(-2em);
+	background-color: transparent;
+}
+
+.Burger.Burger_slip.open .Burger_lines:before,
+.Burger.Burger_slip.open .Burger_lines:after {
+	left: 0.5em;
+	top: 0px;
+}
+
+.Burger.Burger_slip.open .Burger_lines:before {
+	-webkit-transform: translateX(2em) rotate(135deg);
+	-ms-transform: translateX(2em) rotate(135deg);
+	transform: translateX(2em) rotate(135deg);
+}
+
+.Burger.Burger_slip.open .Burger_lines:after {
+	-webkit-transform: translateX(2em) rotate(-135deg);
+	-ms-transform: translateX(2em) rotate(-135deg);
+	transform: translateX(2em) rotate(-135deg);
+}
+
+@media only screen and (max-width: 500px) {
+	.Main_nav__list {
+		display: none;
+	}
+
+	.Mobile_menu {
+		display: block;
+	}
+}

@@ -1,0 +1,48 @@
+.Join_banner {
+	background-image: linear-gradient(
+		to right,
+		var(--green),
+		var(--green),
+		var(--green),
+		var(--green),
+		var(--green)
+	);
+	padding: 0px 80px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.Join_banner h1 {
+	color: #fff;
+	font-size: 2rem;
+}
+
+.Join_banner button {
+	color: var(--green);
+	background-color: #fff;
+	margin-left: auto;
+	font-size: 0.8rem;
+}
+
+/* General Responsive Styles */
+@media only screen and (max-width: 900px) {
+	.Join_banner {
+		padding: 20px;
+	}
+	.Join_banner button {
+		margin-left: 0;
+	}
+}
+
+/* Tablet */
+@media only screen and (min-width: 767px) {
+	.Join_banner {
+		padding: 0 60px;
+		justify-content: left;
+	}
+	.Join_banner button {
+		margin-left: auto;
+	}
+}

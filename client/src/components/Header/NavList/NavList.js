@@ -26,11 +26,11 @@ const NavList = props => {
 			<nav className="Main_nav">
 				<ul className="Main_nav__list">
 					{mainNavList.map(li => (
-						<NavListItem {...li} />
+						<NavListItem {...li} key={li.path} />
 					))}
 				</ul>
-				<div className="burger burger-slip mobile-menu">
-					<div className="burger-lines" />
+				<div className="Burger Burger_slip Mobile_menu">
+					<div className="Burger_lines" />
 				</div>
 			</nav>
 			<nav className="Mobile_nav Hide">
@@ -42,7 +42,7 @@ const NavList = props => {
 							return li;
 						})
 						.map(li => (
-							<NavListItem {...li} />
+							<NavListItem {...li} key={li.path} />
 						))}
 				</ul>
 			</nav>

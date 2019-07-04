@@ -1,4 +1,5 @@
 import React from "react";
+import './HowItWorks.css';
 import magnifier from "../../assets/img/magnifier.svg";
 import businessAffiliate from "../../assets/img/business-affiliate-network.svg";
 import smartWorker from "../../assets/img/smart-worker.svg";
@@ -7,7 +8,7 @@ const HowItWorks = () => {
 	return (
 		<section className="Page_section">
 			<h3>How It Works</h3>
-			<p class="Lg_text">
+			<p className="Lg_text">
 				Get connected with two or more best sellers for your mid-term/long-term
 				project-based jobs. Manage your team with our project mgt suite.
 			</p>

@@ -1,5 +1,6 @@
 import React from "react";
 import search from "../../assets/img/search.svg";
+import "./HomeBanner.css";
 
 class HomeBanner extends React.Component {
 	render() {

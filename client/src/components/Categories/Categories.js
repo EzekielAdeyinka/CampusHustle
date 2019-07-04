@@ -46,7 +46,7 @@ const Categories = () => {
 						</div>
 					</article>
 					<article className="Card Clickable_card">
-						<div class="Card_img">
+						<div className="Card_img">
 							<img src={digitalSkills} alt="Digital Skills Category" />
 						</div>
 						<div className="Card_details">

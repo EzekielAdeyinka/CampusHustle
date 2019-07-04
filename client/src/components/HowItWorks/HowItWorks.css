@@ -1,0 +1,52 @@
+.How_to_card_list {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	justify-content: space-between;
+}
+
+.How_to_card {
+	width: 25%;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 40px;
+	justify-content: center;
+}
+
+.How_to_card__img {
+	width: 35%;
+}
+
+.How_to_card__img img {
+	width: 100%;
+	height: 100%;
+}
+
+.How_to_card__no {
+	font-size: 5rem;
+}
+
+.How_to_card__text {
+	width: 100%;
+	margin-top: 20px;
+	text-justify: justify;
+}
+
+/* General Responsive Styles */
+@media only screen and (max-width: 900px) {
+	.How_to_card {
+		padding: 10px;
+		width: 100%;
+	}
+
+	.How_to_card__img {
+		width: 25%;
+	}
+}
+
+/* Tablet */
+@media only screen and (min-width: 767px) {
+	.How_to_card__img {
+		width: 15%;
+	}
+}
