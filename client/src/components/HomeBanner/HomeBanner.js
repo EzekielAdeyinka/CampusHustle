@@ -10,7 +10,7 @@ class HomeBanner extends React.Component {
 				<h3 className="white">
 					Nigeria’s No. 1 Marketplace for student entrepreneurs & freelancers
 				</h3>
-				<form action="#" method="post" id="search-form">
+				<form action="/search" method="get">
 					<div className="Form_group">
 						<input
 							type="text"

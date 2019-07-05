@@ -176,27 +176,6 @@ header {
 	margin-top: 10px;
 }
 
-.Search_banner {
-	background-image: linear-gradient(
-		to right,
-		var(--green),
-		var(--green),
-		var(--green),
-		var(--green),
-		var(--green)
-	);
-	justify-content: center;
-	text-align: center;
-	color: #fff;
-	padding: 20px;
-}
-
-.Search_banner form {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
 .Search_list {
 	width: 100%;
 }
