@@ -21,12 +21,12 @@ class AllVendors extends React.Component {
 				<Overlay />
 				<Header />
 				<main>
-					<section class="Search_banner">
+					<section className="Search_banner">
 						<h3>All Vendors</h3>
 					</section>
-					<section class="Page_section">
-						<div class="Container">
-							<div class="Card_list Vendors_list">{results}</div>
+					<section className="Page_section">
+						<div className="Container">
+							<div className="Card_list Vendors_list">{results}</div>
 						</div>
 					</section>
 					<Banner />

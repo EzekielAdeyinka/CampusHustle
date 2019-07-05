@@ -201,6 +201,10 @@ header {
 	font-family: inherit;
 }
 
+.Invalid {
+	background-color: #fda49a;
+}
+
 .Profile {
 	text-align: left;
 	display: flex;
