@@ -4,6 +4,7 @@ import Home from "./containers/Home/Home";
 import Search from "./containers/Search/Search";
 import AllVendors from "./containers/AllVendors/AllVendors";
 import Dashboard from "./containers/Dashboard/Dashboard";
+import VendorProfile from "./containers/VendorProfile/VendorProfile";
 
 class App extends Component {
 	render() {
@@ -13,6 +14,7 @@ class App extends Component {
 				<Route path="/search" component={Search} />
 				<Route path="/all-vendors" component={AllVendors} />
 				<Route path="/dashboard" component={Dashboard} />
+				<Route path="/vendor-profile" component={VendorProfile} />
 			</Switch>
 		);
 	}

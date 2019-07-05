@@ -5,15 +5,15 @@ import Header from "../../components/Header/Header";
 import Division from "../../components/UI/Division/Division";
 import edit from "../../assets/img/edit.svg";
 import ezekiel from "../../assets/img/ezekiel.jpg";
-import VendorProfile from "../../components/VendorProfile/VendorProfile";
+import VendorProfileCard from "../../components/VendorProfileCard/VendorProfileCard";
 import Input from "../../components/UI/Input/Input";
 import { updateObject, checkValidity } from "../../shared/utility";
 
 class Dashboard extends React.Component {
 	state = {
 		vendor: {
-			firstname: "Ezekiel ",
-			lastname: "Adeyinka",
+			firstName: "Ezekiel ",
+			lastName: "Adeyinka",
 			servce: "Software Development",
 			campus: "OAU",
 			experience: 3,
@@ -158,7 +158,7 @@ class Dashboard extends React.Component {
 				<Header />
 				<main>
 					<section className="Page_section Profile">
-						<VendorProfile dashboard vendor={this.state.vendor} />
+						<VendorProfileCard dashboard vendor={this.state.vendor} />
 					</section>
 					<Division />
 					<section className="Page_section Update_profile">

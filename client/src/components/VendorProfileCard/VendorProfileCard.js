@@ -1,6 +1,6 @@
 import React from "react";
 
-const VendorProfile = props => {
+const VendorProfileCard = props => {
 	return (
 		<React.Fragment>
 			<div className="Profile_img">
@@ -21,4 +21,4 @@ const VendorProfile = props => {
 	);
 };
 
-export default VendorProfile;
+export default VendorProfileCard;
