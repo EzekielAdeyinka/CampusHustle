@@ -12,7 +12,7 @@ const VendorSignup = lazy(() =>
 	import("./containers/VendorSignup/VendorSignup")
 );
 const VendorLogin = lazy(() => import("./containers/VendorLogin/VendorLogin"));
-const NotFound = lazy(() => import("./components/UI/NotFound/Notfound"));
+const NotFound = lazy(() => import('./components/UI/NotFound/NotFound'));
 
 class App extends Component {
 	render() {
