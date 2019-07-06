@@ -1,16 +1,10 @@
 import React from "react";
-import authClasses from "../../Auth/Auth.module.css";
 
-const input = props => {
-	console.log(props);
+const AuthInput = props => {
 	let inputElement = null;
-	const inputClasses = ["Form_field"];
+	const inputClasses = [];
 	if (props.invalid && props.shouldValidate && props.touched) {
 		inputClasses.push("Invalid");
-	}
-	if (props.auth) {
-		inputClasses.pop();
-		inputClasses.push(authClasses.Input);
 	}
 	switch (props.elementType) {
 		case "input":
@@ -54,19 +48,14 @@ const input = props => {
 				/>
 			);
 	}
-	const jsx = props.auth ? (
+	return (
 		<React.Fragment>
 			{props.label ? (
-				<label for={props.elementConfig.id} className={authClasses.Label}>
-					{props.label.text}
-				</label>
+				<label for={props.elementConfig.id}>{props.label.text}</label>
 			) : null}
 			{inputElement}
 		</React.Fragment>
-	) : (
-		<div className={"Form_group"}>{inputElement}</div>
 	);
-	return jsx;
 };
 
-export default input;
+export default AuthInput;

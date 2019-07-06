@@ -100,13 +100,11 @@ class Dashboard extends React.Component {
 				elementConfig: {
 					name: "bio",
 					cols: 30,
-					rows: 10,
-					placeholder: "Your Phone Number"
+					rows: 10
 				},
 				value: "Bio",
 				validation: {
-					required: true,
-					isNumeric: true
+					required: true
 				},
 				valid: false,
 				touched: false
