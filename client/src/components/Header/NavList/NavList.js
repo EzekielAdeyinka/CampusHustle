@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../../UI/Logo/Logo";
 import NavListItem from "./NavListItem/NavListItem";
+import BurgerMenu from "../../UI/BurgerMenu/BurgerMenu";
 
 const NavList = props => {
 	const mainNavList = [
@@ -21,6 +22,8 @@ const NavList = props => {
 			linkClasses: ["Btn", "Nav_Btn"]
 		}
 	];
+	const mobileNavClasses = ["Mobile_nav"];
+	mobileNavClasses[1] = props.mobileShow ? "" : "Hide";
 	return (
 		<React.Fragment>
 			<nav className="Main_nav">
@@ -29,11 +32,9 @@ const NavList = props => {
 						<NavListItem {...li} key={li.path} />
 					))}
 				</ul>
-				<div className="Burger Burger_slip Mobile_menu">
-					<div className="Burger_lines" />
-				</div>
+				<BurgerMenu show={props.mobileShow} toggle={props.toggleMobileMenu} />
 			</nav>
-			<nav className="Mobile_nav Hide">
+			<nav className={mobileNavClasses.join(' ')}>
 				<Logo />
 				<ul className="Mobile_nav__list">
 					{mainNavList

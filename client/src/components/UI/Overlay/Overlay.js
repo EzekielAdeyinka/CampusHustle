@@ -5,7 +5,7 @@ const Overlay = props => {
 	if (props.show) {
 		classes.pop();
 	}
-	return <div className={classes.join(" ")} />;
+	return <div className={classes.join(" ")} onClick={props.mobileToggle} />;
 };
 
 export default Overlay;

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Footer from "../../components/Footer/Footer";
-import Overlay from "../../components/UI/Overlay/Overlay";
 import Header from "../../components/Header/Header";
 import Banner from "../../components/Banner/Banner";
 import HomeBanner from "../../components/HomeBanner/HomeBanner";
@@ -12,7 +11,6 @@ class Home extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<Overlay />
 				<Header />
 				<main>
 					<HomeBanner />

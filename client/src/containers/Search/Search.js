@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
-import Overlay from "../../components/UI/Overlay/Overlay";
 import Header from "../../components/Header/Header";
 import Banner from "../../components/Banner/Banner";
 import SearchBanner from "../../components/SearchBanner/SearchBanner";
@@ -20,7 +19,6 @@ class Search extends React.Component {
 		}
 		return (
 			<React.Fragment>
-				<Overlay />
 				<Header />
 				<main>
 					<SearchBanner />

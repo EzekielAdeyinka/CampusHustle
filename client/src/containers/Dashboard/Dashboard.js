@@ -1,6 +1,5 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
-import Overlay from "../../components/UI/Overlay/Overlay";
 import Header from "../../components/Header/Header";
 import Division from "../../components/UI/Division/Division";
 import edit from "../../assets/img/edit.svg";
@@ -152,7 +151,6 @@ class Dashboard extends React.Component {
 		});
 		return (
 			<React.Fragment>
-				<Overlay />
 				<Header />
 				<main>
 					<section className="Page_section Profile">

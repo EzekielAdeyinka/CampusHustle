@@ -264,9 +264,6 @@ header {
 	.Page_section {
 		padding: 20px 40px;
 	}
-	.Main_banner {
-		padding: 20px;
-	}
 	.Aside_svg {
 		width: 100%;
 	}
@@ -301,8 +298,11 @@ header {
 }
 
 /* Tablet */
-@media only screen and (min-width: 767px) {
-	.page-section {
+@media only screen and (max-width: 767px) {
+	.Page_section {
 		padding: 30px 60px;
+	}
+	.Form_group {
+		width: 80%;
 	}
 }

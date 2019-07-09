@@ -1,6 +1,5 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
-import Overlay from "../../components/UI/Overlay/Overlay";
 import Header from "../../components/Header/Header";
 import VendorProfileCard from "../../components/VendorProfileCard/VendorProfileCard";
 import ezekiel from "../../assets/img/ezekiel.jpg";
@@ -23,7 +22,6 @@ class VendorProfile extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-				<Overlay />
 				<Header />
 				<main>
 					<section className="Page_section Profile Space_down">
